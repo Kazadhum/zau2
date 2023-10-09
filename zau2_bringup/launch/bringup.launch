@@ -21,7 +21,7 @@
     </include>
 
     <!-- robot description parameter -->
-    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find zau2)/urdf/zau2.urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find zau2_description)/urdf/ur5e.urdf.xacro" />
 
     <!-- Send robot states to tf -->
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">

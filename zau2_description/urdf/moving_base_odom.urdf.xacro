@@ -41,7 +41,7 @@
         <color rgba="1.0 1.0 1.0 1.0" />
     </material>
 
-    <xacro:include filename="$(find ur_e_description)/urdf/realsense/intel_realsense.urdf.xacro" />
+    <xacro:include filename="$(find zau2_description)/urdf/realsense/intel_realsense.urdf.xacro" />
     <xacro:if value="$(arg realsense_enabled)">
         <link name="$(arg realsense_prefix)_realsense_mountpoint" />
         <joint name="$(arg realsense_prefix)_realsense_mountpoint_joint" type="fixed">
@@ -58,7 +58,7 @@
     <xacro:arg name="use_nominal_extrinsics" default="false" />
     <xacro:arg name="add_plug" default="false" />
     <xacro:arg name="use_mesh" default="true" />
-    <xacro:include filename="$(find ur_e_description)/urdf/realsense/_l515.urdf.xacro" />
+    <xacro:include filename="$(find zau2_description)/urdf/realsense/_l515.urdf.xacro" />
 
     <xacro:sensor_l515 parent="base_link_mb" use_nominal_extrinsics="$(arg use_nominal_extrinsics)"
         add_plug="$(arg add_plug)" use_mesh="$(arg use_mesh)">
@@ -89,7 +89,7 @@
             <geometry>
                 <!-- <box size="0.900 0.600 0.770" /> -->
                 <!-- <box size="0.900 0.650 0.770" /> -->
-                <mesh filename="package://ur_e_description/meshes/moving_base/moving_base.STL"
+                <mesh filename="package://zau2_description/meshes/moving_base/moving_base.STL"
                     scale="0.001 0.001 0.001" />
             </geometry>
             <material name="light_black" />
@@ -131,7 +131,7 @@
         <visual>
             <origin xyz="0 0 -0.055" rpy="-1.57 0 0" />
             <geometry>
-                <mesh filename="package://ur_e_description/meshes/wheels/left_tire.stl"
+                <mesh filename="package://zau2_description/meshes/wheels/left_tire.stl"
                     scale="0.0025 0.0025 0.0025" />
             </geometry>
             <material name="dark" />
@@ -162,7 +162,7 @@
         <visual>
             <origin xyz="0 0 0.055" rpy="1.57 0 0" />
             <geometry>
-                <mesh filename="package://ur_e_description/meshes/wheels/left_tire.stl"
+                <mesh filename="package://zau2_description/meshes/wheels/left_tire.stl"
                     scale="0.0025 0.0025 0.0025" />
             </geometry>
             <material name="dark" />
@@ -193,7 +193,7 @@
         <visual>
             <origin xyz="0.027 -0.06 0" rpy="1.57 0 0" />
             <geometry>
-                <mesh filename="package://ur_e_description/meshes/wheels/left_tire.stl"
+                <mesh filename="package://zau2_description/meshes/wheels/left_tire.stl"
                     scale="0.0020 0.0020 0.0020" />
                 <!-- <cylinder length="0.024" radius="0.084" /> -->
             </geometry>
@@ -226,7 +226,7 @@
         <visual>
             <origin xyz="0.027 -0.06 0" rpy="-1.57 0 0" />
             <geometry>
-                <mesh filename="package://ur_e_description/meshes/wheels/left_tire.stl"
+                <mesh filename="package://zau2_description/meshes/wheels/left_tire.stl"
                     scale="0.0020 0.0020 0.0020" />
                 <!-- <cylinder length="0.024" radius="0.084" /> -->
             </geometry>
@@ -261,7 +261,7 @@
         <visual>
             <origin xyz="0 -0.06 0" rpy="1.57 0 0" />
             <geometry>
-                <mesh filename="package://ur_e_description/meshes/wheels/left_tire.stl"
+                <mesh filename="package://zau2_description/meshes/wheels/left_tire.stl"
                     scale="0.0020 0.0020 0.0020" />
                 <!-- <cylinder length="0.024" radius="0.084" /> -->
             </geometry>
@@ -294,7 +294,7 @@
         <visual>
             <origin xyz="0 -0.06 0" rpy="-1.57 0 0" />
             <geometry>
-                <mesh filename="package://ur_e_description/meshes/wheels/left_tire.stl"
+                <mesh filename="package://zau2_description/meshes/wheels/left_tire.stl"
                     scale="0.0020 0.0020 0.0020" />
                 <!-- <cylinder length="0.024" radius="0.084" /> -->
             </geometry>
