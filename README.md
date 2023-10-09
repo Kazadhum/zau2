@@ -1,6 +1,6 @@
 # zau2
 
-## Clone Dependencies
+## Dependencies
 
 ```
 git clone https://github.com/lmark1/velodyne_simulator
