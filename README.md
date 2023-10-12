@@ -3,8 +3,10 @@
 ## Dependencies
 
 ```
-git clone https://github.com/lmark1/velodyne_simulator
+git clone https://bitbucket.org/DataspeedInc/velodyne_simulator -b master
 git clone https://github.com/ros/geometry2.git
+https://github.com/nilseuropa/realsense_ros_gazebo
+
 
 git clone https://github.com/IntelRealSense/realsense-ros.git
 cd realsense-ros/
