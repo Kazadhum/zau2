@@ -21,7 +21,13 @@
     </include>
 
     <!-- robot description parameter -->
-    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find zau2_description)/urdf/ur5e.urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find zau2_description)/urdf/zau2.urdf.xacro" />
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+        <param name="use_gui" value="true"/>
+    </node>
+    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find zau2_description)/rviz/view_robot.rviz" required="true" />
 
     <!-- Send robot states to tf -->
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
@@ -32,6 +38,5 @@
         -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos)
         -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)
         -param robot_description" />
-
 
 </launch>
