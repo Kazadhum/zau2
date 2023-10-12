@@ -159,7 +159,7 @@
         <visual>
             <origin xyz="0 0 0.055" rpy="1.57 0 0" />
             <geometry>
-                <mesh filename="package://ur_e_description/meshes/wheels/left_tire.stl"
+                <mesh filename="package://zau2_description/meshes/wheels/left_tire.stl"
                     scale="0.0025 0.0025 0.0025" />
             </geometry>
             <material name="dark" />
