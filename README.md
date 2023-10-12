@@ -4,6 +4,7 @@
 
 ```
 git clone https://github.com/lmark1/velodyne_simulator
+git clone https://github.com/ros/geometry2.git
 
 git clone https://github.com/IntelRealSense/realsense-ros.git
 cd realsense-ros/
