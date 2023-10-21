@@ -1,19 +1,4 @@
-<?xml version="1.0"?>
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="zau2">
-
-    <xacro:include filename="$(find zau2_description)/urdf/common.gazebo.xacro" />
-
-    <!-- ur5e -->
-    <xacro:include filename="$(find zau2_description)/urdf/my_ur5e_macro.urdf.xacro" />
-
-    <!-- arm -->
-    <xacro:ur5e_robot prefix="" joint_limited="true"
-    shoulder_pan_lower_limit="${-pi}" shoulder_pan_upper_limit="${pi}"
-    shoulder_lift_lower_limit="${-pi}" shoulder_lift_upper_limit="${pi}"
-    elbow_joint_lower_limit="${-pi}" elbow_joint_upper_limit="${pi}"
-    wrist_1_lower_limit="${-pi}" wrist_1_upper_limit="${pi}"
-    wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
-    wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"
-    />
+<?xml version="1.0" ?>
+<robot name="zau2" xmlns:xacro="http://ros.org/wiki/xacro">
 
 </robot>
