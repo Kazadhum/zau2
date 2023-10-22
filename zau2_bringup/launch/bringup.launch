@@ -4,7 +4,6 @@
     <arg name="sim" default="true" />
     <arg name="gui" default="true" doc="Starts gazebo gui" />
     <arg name="paused" default="false" doc="Starts gazebo in paused mode" />
-    <arg name="moveit" default="true" doc="Use MoveIt for motion planning"/>
 
     <arg name="name" default="zau2" />
     <arg name="x_pos" default="0.0" />
@@ -22,7 +21,7 @@
     </include>
 
     <!-- robot description parameter -->
-    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find zau2_description)/urdf/zau2.urdf.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find zau2_description)/urdf/zau_arm.urdf.xacro" />
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
         <param name="use_gui" value="true"/>
@@ -39,13 +38,5 @@
         -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos)
         -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)
         -param robot_description" />
-
-    <!-- Start planning with moveit-->
-    <group if="$(arg moveit)">
-        <include file="$(find ur10_e_moveit_config)/launch/ur10_e_moveit_planning_execution.launch">
-            <arg name="sim" value="$(arg sim)"/>
-            <!-- <arg name="load_robot_description" value="false"/> -->
-        </include>
-    </group>
 
 </launch>
