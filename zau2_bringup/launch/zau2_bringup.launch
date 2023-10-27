@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="gui" default="false" doc="Starts gazebo gui"/>
+    <arg name="moveit" default="true" doc="Use MoveIt for motion planning"/>
+    <arg name="rviz" default="true" doc="Launch RViz with movit planner plugin"/>
+    <arg name="sim" default="true" doc="Launch RViz with movit planner plugin"/>
+
+    <include file="$(find ur_gazebo)/launch/mmtbot_ur10e_bringup.launch">
+        <arg name="gui" value="$(arg gui)"/>
+        <arg name="robot_description_file" value="$(find zau2_description)/urdf/load_zau2_ur10e.launch.xml"/>
+    </include>
+
+    <!--  Start planning with moveit  -->
+   <!-- <group if="$(arg moveit)">
+       <include file="$(find ur10e_moveit_config)/launch/ur10e_moveit_planning_execution_mmtbot.launch">
+           <arg name="sim" value="$(arg sim)"/>
+           <arg name="load_robot_description" value="false"/>
+       </include>
+   </group> -->
+
+    <!-- Start visualization with rviz-->
+   <include if="$(arg rviz)" file="$(find mmtbot_bringup)/launch/visualize.launch">
+   </include>
+
+    <!--  Start interactive positioning of pattern  -->
+    <node name="interactive_pattern" pkg="mmtbot_gazebo" type="interactive_pattern" output="screen"/>
+
+</launch>
