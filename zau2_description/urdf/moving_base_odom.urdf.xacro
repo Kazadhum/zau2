@@ -75,12 +75,12 @@
 
     <!-- ######################## the actual robot ######################## -->
     <!-- world link -->
-    <!-- <link name="base_footprint" /> -->
+    <link name="base_footprint" />
 
 
     <!-- the mobile base link and joint to the world -->
     <joint name="base_joint" type="fixed">
-        <parent link="world" /> <!-- Changed parent link to world for zau2 -->
+        <parent link="base_footprint" /> <!-- Changed parent link to world for zau2 -->
         <child link="base_link_mb" />
         <origin xyz="0 0 0.010" rpy="0 0 0" />
     </joint>

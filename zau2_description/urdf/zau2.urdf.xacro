@@ -48,7 +48,7 @@
     <!-- ####################################### -->
     <!-- Declare links and joints -->
     <!-- ####################################### -->
-    <link name="world"/>
+    <!-- <link name="base_footprint"/> -->
 
     <!-- Place table 1 in the scene-->
     <!-- <xacro:table_macro name="table" parent="world" width="${table_width}"
