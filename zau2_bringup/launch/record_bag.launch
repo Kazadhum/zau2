@@ -24,8 +24,8 @@
             /tf_static
             /joint_states
 
-            /camera/rgb/image_raw/compressed
-            /camera/rgb/camera_info
+            /hand_camera/rgb/image_raw/compressed
+            /hand_camera/rgb/camera_info
 
             /camera_mb/rgb/image_raw/compressed
             /camera_mb/rgb/camera_info      
