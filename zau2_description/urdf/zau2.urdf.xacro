@@ -53,8 +53,8 @@
     <!-- Place table 1 in the scene-->
     <!-- <xacro:table_macro name="table" parent="world" width="${table_width}"
                        lenght="${table_lenght}" height="${table_height}"
-                       tabletop_thickness="${table_tabletop_thickness}" leg_radius="${table_leg_radius}"> -->
-        <!-- <origin xyz="-1 0 0" rpy="0 0 ${M_PI/2}" /> -->
+                       tabletop_thickness="${table_tabletop_thickness}" leg_radius="${table_leg_radius}">
+        <origin xyz="-1 0 0" rpy="0 0 ${M_PI/2}" /> -->
     <!-- </xacro:table_macro> -->
 
     <!-- Place AGV -->
@@ -74,10 +74,10 @@
     />
 
     <!--  Place robot on top of the table1-->
-    <joint name="tabletop_table_to_ur10e" type="fixed">
+    <joint name="moving_base_to_ur10e" type="fixed">
         <parent link="base_link_mb" />
         <child link = "base_link"/>
-        <origin xyz="0.0 0.0 0.001" rpy="0.0 0.0 0.0" />
+        <origin xyz="-0.296 -0.1688 0.826" rpy="0.0 0.0 0.0" />
     </joint>
 
 
@@ -98,7 +98,7 @@
 
     <!-- Put world camera on top of tripod -->
     <!-- <xacro:sensor_astra prefix="world_camera" parent="tripod_right_support"> -->
-        <!-- <origin xyz="0.02 0.07 0.015" rpy="0 0.0 0" /> -->
+        <!-- <origin xyz="0.02 0.07 0.015   " rpy="0 0.0 0" /> -->
     <!-- </xacro:sensor_astra> -->
 
 </robot>
