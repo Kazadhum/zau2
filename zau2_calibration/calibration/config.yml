@@ -37,7 +37,7 @@ bag_file: "$ROS_BAGS/zau2_mmtzau/bag1.bag"
 
 # You must define a frame of reference for the optimization process.
 # It must exist in the transformation chains of all the sensors which are being calibrated.
-world_link: "base_footprint"
+world_link: "odom"
 
 # ATOM will calibrate the extrinsic parameters of your sensors.
 # In this section you should discriminate the sensors that will be part of the calibrations.
@@ -123,7 +123,7 @@ calibration_pattern:
   # The parent frame id (or link) of the pattern.
   # For example, in hand-eye calibration the parent link
   # of the pattern can be the end-effector or the base of the arm
-  parent_link: "world"
+  parent_link: "base_footprint"
 
   # Defines if the pattern link is the same in all collections (i.e. fixed=true),
   # or each collection will have its own estimate of the link transformation.
