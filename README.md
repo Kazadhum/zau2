@@ -1,11 +1,12 @@
 # zau2
 
 ## Dependencies
+First of all, make sure you have `mmtbot` (and its dependencies) installed and working properly.
 
 ```
 git clone https://bitbucket.org/DataspeedInc/velodyne_simulator -b master
 git clone https://github.com/ros/geometry2.git
-https://github.com/nilseuropa/realsense_ros_gazebo
+git clone https://github.com/nilseuropa/realsense_ros_gazebo
 
 
 git clone https://github.com/IntelRealSense/realsense-ros.git
