@@ -13,7 +13,7 @@
  https://github.com/lardemua/atom
 
 WARNING WARNING WARNING WARNING
-Auto-generated file on 17/10/2023 11:41:14
+Auto-generated file on 28/10/2023 15:32:05
 Only modify this file if you know what you are doing!
 """
 
@@ -26,7 +26,7 @@ def main():
     # ---------------------------------------------------
     # Handle command line arguments
     # ---------------------------------------------------
-    parser = argparse.ArgumentParser(description='Configure zau2_e5_calibration calibration package. See  https://lardemua.github.io/atom_documentation/procedures/#configure-a-calibration-package for more info.')
+    parser = argparse.ArgumentParser(description='Configure zau2_calibration calibration package. See  https://lardemua.github.io/atom_documentation/procedures/#configure-a-calibration-package for more info.')
 
     parser.add_argument('-utf', '--use_tfs', action='store_true', help='ATOM will use the transforms on /tf and /tf_static topics. See https://lardemua.github.io/atom_documentation/procedures/#using-tfs-instead-of-the-xacro-file for more info.')
 
@@ -37,7 +37,7 @@ def main():
     # ---------------------------------------------------
     # Prepare command to run
     # ---------------------------------------------------
-    command = 'rosrun atom_calibration configure_calibration_pkg -n zau2_e5_calibration'
+    command = 'rosrun atom_calibration configure_calibration_pkg -n zau2_calibration'
 
     if args['use_tfs']: # Add -utf flag if that's the case
         command += ' --use_tfs'

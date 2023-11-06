@@ -65,28 +65,28 @@ Visualization Manager:
     Tree: {}
     Update Interval: 0
     Value: false
-  - Class: rviz/MarkerArray
+  - Class: rviz/RobotModel
+    Collision Enabled: false
     Enabled: true
-    Marker Topic: /dataset_playback/robot_meshes
-    Name: Robot Meshes
-    Namespaces: {}
-    Queue Size: 10
+    Links: {}
+    Name: RobotModel
+    Robot Description: robot_description
+    TF Prefix: ''
+    Update Interval: 0
+    Value: true
+    Visual Enabled: true
+  - Class: rviz/InteractiveMarkers
+    Enable Transparency: true
+    Enabled: true
+    Name: ManualDataLabeler-InteractiveMarkers
+    Show Axes: true
+    Show Descriptions: true
+    Show Visual Aids: false
+    Update Topic: data_labeler/update
     Value: true
   - Class: rviz/Image
     Enabled: true
-    Image Topic: /camera/rgb/image_raw/labeled2d
-    Max Value: 1
-    Median window: 5
-    Min Value: 0
-    Name: camera_ee-Labels-Image
-    Normalize Range: true
-    Queue Size: 2
-    Transport Hint: raw
-    Unreliable: false
-    Value: false
-  - Class: rviz/Image
-    Enabled: true
-    Image Topic: /camera_mb/rgb/image_raw/labeled2d
+    Image Topic: /camera_mb/rgb/image_raw/labeled
     Max Value: 1
     Median window: 5
     Min Value: 0
@@ -96,6 +96,44 @@ Visualization Manager:
     Transport Hint: raw
     Unreliable: false
     Value: false
+  - Class: rviz/Camera
+    Enabled: true
+    Image Rendering: background and overlay
+    Image Topic: /camera_mb/rgb/image_raw
+    Name: camera_mb-Camera
+    Overlay Alpha: 0.5
+    Queue Size: 2
+    Transport Hint: raw
+    Unreliable: false
+    Value: false
+    Visibility:
+      Value: true
+    Zoom Factor: 1
+  - Class: rviz/Image
+    Enabled: true
+    Image Topic: /hand_camera/rgb/image_raw/labeled
+    Max Value: 1
+    Median window: 5
+    Min Value: 0
+    Name: hand_camera-Labels-Image
+    Normalize Range: true
+    Queue Size: 2
+    Transport Hint: raw
+    Unreliable: false
+    Value: false
+  - Class: rviz/Camera
+    Enabled: true
+    Image Rendering: background and overlay
+    Image Topic: /hand_camera/rgb/image_raw
+    Name: hand_camera-Camera
+    Overlay Alpha: 0.5
+    Queue Size: 2
+    Transport Hint: raw
+    Unreliable: false
+    Value: false
+    Visibility:
+      Value: true
+    Zoom Factor: 1
   Enabled: true
   Global Options:
     Background Color: 255; 255; 255

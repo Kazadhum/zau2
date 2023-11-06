@@ -78,44 +78,19 @@ Visualization Manager:
   - Class: rviz/InteractiveMarkers
     Enable Transparency: true
     Enabled: true
-    Name: ManualDataLabeler-InteractiveMarkers
+    Name: MoveSensors-InteractiveMarker
     Show Axes: true
     Show Descriptions: true
     Show Visual Aids: false
-    Update Topic: data_labeler/update
+    Update Topic: set_initial_estimate/update
     Value: true
   - Class: rviz/Image
     Enabled: true
-    Image Topic: /camera/rgb/image_raw/labeled
+    Image Topic: /camera_mb/rgb/image_raw
     Max Value: 1
     Median window: 5
     Min Value: 0
-    Name: camera_ee-Labels-Image
-    Normalize Range: true
-    Queue Size: 2
-    Transport Hint: raw
-    Unreliable: false
-    Value: false
-  - Class: rviz/Camera
-    Enabled: true
-    Image Rendering: background and overlay
-    Image Topic: /camera/rgb/image_raw
-    Name: camera_ee-Camera
-    Overlay Alpha: 0.5
-    Queue Size: 2
-    Transport Hint: raw
-    Unreliable: false
-    Value: false
-    Visibility:
-      Value: true
-    Zoom Factor: 1
-  - Class: rviz/Image
-    Enabled: true
-    Image Topic: /camera_mb/rgb/image_raw/labeled
-    Max Value: 1
-    Median window: 5
-    Min Value: 0
-    Name: camera_mb-Labels-Image
+    Name: camera_mb-Image
     Normalize Range: true
     Queue Size: 2
     Transport Hint: raw
@@ -134,6 +109,45 @@ Visualization Manager:
     Visibility:
       Value: true
     Zoom Factor: 1
+  - Class: rviz/MarkerArray
+    Enabled: true
+    Marker Topic: camera_mb/frustum
+    Name: camera_mb-Frustum
+    Namespaces: {}
+    Queue Size: 10
+    Value: true
+  - Class: rviz/Image
+    Enabled: true
+    Image Topic: /hand_camera/rgb/image_raw
+    Max Value: 1
+    Median window: 5
+    Min Value: 0
+    Name: hand_camera-Image
+    Normalize Range: true
+    Queue Size: 2
+    Transport Hint: raw
+    Unreliable: false
+    Value: false
+  - Class: rviz/Camera
+    Enabled: true
+    Image Rendering: background and overlay
+    Image Topic: /hand_camera/rgb/image_raw
+    Name: hand_camera-Camera
+    Overlay Alpha: 0.5
+    Queue Size: 2
+    Transport Hint: raw
+    Unreliable: false
+    Value: false
+    Visibility:
+      Value: true
+    Zoom Factor: 1
+  - Class: rviz/MarkerArray
+    Enabled: true
+    Marker Topic: hand_camera/frustum
+    Name: hand_camera-Frustum
+    Namespaces: {}
+    Queue Size: 10
+    Value: true
   Enabled: true
   Global Options:
     Background Color: 255; 255; 255

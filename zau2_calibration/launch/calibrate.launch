@@ -17,11 +17,15 @@
 <!-- WARNING WARNING WARNING WARNING auto-generated file!! -->
 <!-- Only modify this file if you know what you are doing! -->
 
+<!--
+@file calibrate.launch Runs an optimization to calibrate the robot's sensors.
+-->
+
 <launch>
 
     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
     <!-- Parameters-->
-    <arg name="rviz_file" default="$(find zau2_e5_calibration)/rviz/dataset_playback.rviz"/>
+    <arg name="rviz_file" default="$(find zau2_calibration)/rviz/calibrate.rviz"/>
     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->

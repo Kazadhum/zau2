@@ -33,7 +33,7 @@
 description_file: "package://zau2_description/urdf/zau2.urdf.xacro"
 
 # The calibration framework requires a bagfile to extract the necessary data for the calibration.
-bag_file: "$ROS_BAGS/zau2/e4_dualrgb_v2.bag"
+bag_file: "$ROS_BAGS/zau2_mmtzau/bag1.bag" 
 
 # You must define a frame of reference for the optimization process.
 # It must exist in the transformation chains of all the sensors which are being calibrated.
@@ -72,29 +72,45 @@ sensors:
   #   /world_camera/rgb/image_raw
   #
 
-  camera_ee:
-    link: "camera_rgb_optical_frame"
-    parent_link: "camera_link"
-    child_link: "camera_rgb_frame"
-    topic_name: "/camera/rgb/image_raw"
+  hand_camera:
+    link: "hand_camera_rgb_optical_frame"
+    parent_link: "hand_camera_link"
+    child_link: "hand_camera_rgb_frame"
+    topic_name: "/hand_camera/rgb/image_raw"
     throttle: 10
     modality: "rgb"
 
+
+  # You can have more than one sensor:
   camera_mb:
     link: "camera_mb_rgb_optical_frame"
     parent_link: "camera_mb_link"
     child_link: "camera_mb_rgb_frame"
     topic_name: "/camera_mb/rgb/image_raw"
     throttle: 10
-    modality: rgb
+    modality: "rgb"
 
 # ATOM will calibrate the extrinsic parameters of your links.
 # In this section you should discriminate the additional transformations that will be part of the calibrations.
 # NOTE: Delete the "" after additional_tfs to prevent the error 'All mapping items must start at the same column YAML'
-additional_tfs:
+additional_tfs: 
+
   base_link_mb_to_base_link:
-    parent_link: "base_link_mb"
-    child_link: "base_link"
+      parent_link: "base_link_mb"
+      child_link: "base_link"
+  # Each key will define a transformations and its name, which will be use throughout the calibration.
+  # Each additional transformations definition must have the following properties:
+  #
+  #       parent_link:
+  #           The parent link of the transformation (i.e. link) to be calibrated.
+  #
+  #       child_link:
+  #           This is the transformation (i.e. link) that we be optimized.
+  #
+  # EXAMPLE:
+  # base_footprint_to_base_link:
+  #   parent_link: "base_footprint"
+  #   child_link: "base_link"
 
 # The calibration requires a detectable pattern.
 # This section describes the properties of the calibration pattern used in th calibration.
@@ -107,7 +123,7 @@ calibration_pattern:
   # The parent frame id (or link) of the pattern.
   # For example, in hand-eye calibration the parent link
   # of the pattern can be the end-effector or the base of the arm
-  parent_link: "odom"
+  parent_link: "base_footprint"
 
   # Defines if the pattern link is the same in all collections (i.e. fixed=true),
   # or each collection will have its own estimate of the link transformation.
@@ -128,7 +144,7 @@ calibration_pattern:
 
   # Mesh file (collada.dae or stl) for showing pattern on rviz. URI or regular path.
   # See: description_file
-  mesh_file: "package://zau2_description/meshes/charuco_800x600/charuco_800x600.dae"
+  mesh_file: "package://mmtbot_gazebo/models/charuco_800x600/charuco_800x600.dae"
 
   # The border width from the edge corner to the pattern physical edge.
   # Used for 3D sensors and lidars.
@@ -157,4 +173,3 @@ anchored_sensor: ""
 
 # Max time delta (in milliseconds) between sensor data messages when creating a collection.
 max_duration_between_msgs: 1000
-

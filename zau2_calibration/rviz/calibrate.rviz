@@ -88,11 +88,11 @@ Visualization Manager:
     Value: true
   - Class: rviz/Image
     Enabled: true
-    Image Topic: /camera/rgb/image_raw/c000/labeled2d
+    Image Topic: /camera_mb/rgb/image_raw/c000/labeled2d
     Max Value: 1
     Median window: 5
     Min Value: 0
-    Name: camera_ee-Labels-Image
+    Name: camera_mb-Labels-Image
     Normalize Range: true
     Queue Size: 2
     Transport Hint: raw
@@ -100,11 +100,11 @@ Visualization Manager:
     Value: false
   - Class: rviz/Image
     Enabled: true
-    Image Topic: /camera_mb/rgb/image_raw/c000/labeled2d
+    Image Topic: /hand_camera/rgb/image_raw/c000/labeled2d
     Max Value: 1
     Median window: 5
     Min Value: 0
-    Name: camera_mb-Labels-Image
+    Name: hand_camera-Labels-Image
     Normalize Range: true
     Queue Size: 2
     Transport Hint: raw

@@ -34,22 +34,22 @@
     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
     <!-- Evaluation -->
     <node type="rgb_to_rgb_evaluation" pkg="atom_evaluation" 
-        name="camera_ee_to_camera_mb_evaluation"
-        args="-ss camera_ee -st camera_mb -train_json $(arg train_json) -test_json $(arg test_json) -csf '$(arg csf)' -sfr" 
+        name="rgb_to_rgb_evaluation"
+        args="-ss hand_camera -st camera_mb -train_json $(arg train_json) -test_json $(arg test_json) -csf '$(arg csf)' -sfr" 
         output="screen"/>
 
     <node type="inter_collection_rgb_to_rgb_evaluation" pkg="atom_evaluation" 
-        name="inter_collection_camera_ee_to_camera_mb_evaluation"
-        args="-ss camera_ee -st camera_mb -wf odom -train_json $(arg train_json) -test_json $(arg test_json) -csf '$(arg csf)' -sfr" 
+        name="inter_collection_rgb_to_rgb_evaluation"
+        args="-ss hand_camera -st camera_mb -wf odom -train_json $(arg train_json) -test_json $(arg test_json) -csf '$(arg csf)' -sfr" 
         output="screen"/>
 
     <node type="inter_collection_rgb_to_rgb_evaluation" pkg="atom_evaluation" 
-        name="inter_collection_camera_ee_to_camera_ee_evaluation"
-        args="-ss camera_ee -st camera_ee -wf odom -train_json $(arg train_json) -test_json $(arg test_json) -csf '$(arg csf)' -sfr" 
+        name="inter_collection_rgb_to_rgb_evaluation"
+        args="-ss hand_camera -st hand_camera -wf odom -train_json $(arg train_json) -test_json $(arg test_json) -csf '$(arg csf)' -sfr" 
         output="screen"/>
 
     <node type="inter_collection_rgb_to_rgb_evaluation" pkg="atom_evaluation" 
-        name="inter_collection_camera_mb_to_camera_mb_evaluation"
+        name="inter_collection_rgb_to_rgb_evaluation"
         args="-ss camera_mb -st camera_mb -wf odom -train_json $(arg train_json) -test_json $(arg test_json) -csf '$(arg csf)' -sfr" 
         output="screen"/>
 
