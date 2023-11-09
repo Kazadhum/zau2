@@ -33,7 +33,7 @@
 description_file: "package://zau2_description/urdf/zau2.urdf.xacro"
 
 # The calibration framework requires a bagfile to extract the necessary data for the calibration.
-bag_file: "$ROS_BAGS/zau2_mmtzau/bag_new3.bag" 
+bag_file: "$ROS_BAGS/zau2/bag2.bag" 
 
 # You must define a frame of reference for the optimization process.
 # It must exist in the transformation chains of all the sensors which are being calibrated.
