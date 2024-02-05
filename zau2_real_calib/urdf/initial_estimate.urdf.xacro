@@ -58,7 +58,7 @@
     <!-- </xacro:table_macro> -->
 
     <!-- Place AGV -->
-    <xacro:include filename="$(find zau2_description)/urdf/moving_base_odom.urdf.xacro" /> 
+    <xacro:include filename="$(find zau2_real_description)/urdf/moving_base_odom.urdf.xacro" /> 
 
     <!--  Place manipulator1 in the scene-->
     <xacro:ur_robot_gazebo

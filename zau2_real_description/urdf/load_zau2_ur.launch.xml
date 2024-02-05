@@ -32,7 +32,7 @@
 
   <!--  <param name="robot_description" command="$(find xacro)/xacro '$(find ur_gazebo)/urdf/ur.xacro'-->
 <!--  <param name="robot_description" command="$(find xacro)/xacro '$(find mmtbot_gazebo)/urdf/mmtbot.urdf.xacro'-->
-  <param name="robot_description" command="$(find xacro)/xacro '$(find zau2_description)/urdf/zau2.urdf.xacro'
+  <param name="robot_description" command="$(find xacro)/xacro '$(find zau2__real_description)/urdf/zau2.urdf.xacro'
     joint_limit_params:=$(arg joint_limit_params)
     kinematics_params:=$(arg kinematics_params)
     physical_params:=$(arg physical_params)
